@@ -1,0 +1,133 @@
+/* General reset and box-sizing rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Layout container to create dark grey side sections */
+.layout-container-unique {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1200px) 1fr; /* Adjust the middle column width as needed */
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff; /* Dark grey background for the side sections */
+  transition: filter 0.3s ease; /* Smooth transition for blur effect */
+}
+
+.side-section-unique {
+  background-color: #ffffff; /* Dark grey background for the side sections */
+}
+
+.content-container-unique {
+  background-color: rgb(218, 219, 230); /* White background for the content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.info-title-unique {
+  font-size: 1.8rem; /* Increased font size for better emphasis */
+  margin: 20px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700; /* Bold the title for better visibility */
+  color: #333; /* Darker color for better contrast */
+  letter-spacing: 0.05em; /* Add some letter spacing */
+}
+
+.kontakt-button-unique {
+  padding: 12px 30px; /* Slightly larger padding for a more balanced look */
+  background-color: #6f758b; /* Matching the lighter shade */
+  color: #ffffff;
+  border: none;
+  border-radius: 50px; /* More rounded corners for a modern look */
+  cursor: pointer;
+  font-size: 1.7rem; /* Adjusted font size for consistency */
+  text-decoration: none;
+  margin: 20px auto;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for hover */
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
+  font-weight: 600; /* Boldened text for emphasis */
+}
+
+.kontakt-button-unique:hover {
+  background-color: #5e6481; /* Darker hover color */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+
+.info-text-unique {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.list-item-unique {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative; /* Ensure the item is a reference for its child elements */
+}
+
+.list-item-unique:hover {
+  background-color: #f4f4f4;
+  transform: scale(1.02);
+}
+
+.list-item-unique i {
+  color: #6b8e23;
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.info-details-unique {
+  margin-top: 5px; /* Adds space between the title and the info text */
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.3rem;
+  color: #333;
+  width: 100%; /* Ensures it takes the full width of the list item */
+}
+
+.info-details-unique p {
+  margin: 0; 
+  line-height: 1.5;
+}
+
+/* Blur effect when Cookie Banner is visible */
+.layout-container-unique.blurred {
+  filter: blur(4px); /* Apply blur effect */
+  pointer-events: none; /* Prevent interactions with blurred content */
+
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+  /* Add responsive styles here if necessary */
+}

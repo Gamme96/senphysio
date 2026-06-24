@@ -1,0 +1,190 @@
+/* CookieBanner.css */
+/* Updated Cookie Banner CSS */
+
+.cookie-banner {
+    background-color: rgba(244, 244, 247, 0.9);  /* Semi-transparent background */
+    border: 1px solid #ccc;                        /* Light border */
+    padding: 20px;                                 /* Adjust padding for more comfort */
+    position: fixed;                               /* Fixed positioning */
+    top: 50%;                                      /* Center vertically */
+    left: 50%;                                     /* Center horizontally */
+    transform: translate(-50%, -50%);             /* Center the banner using transform */
+    z-index: 1000;                                 /* Ensure it's on top of other elements */
+    text-align: center;                            /* Center align text */
+    font-family: 'Open Sans', sans-serif;         /* Font family */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);    /* Subtle shadow for depth */
+    border-radius: 8px;                            /* Rounded corners */
+    width: 80%;                                    /* Use percentage width for responsiveness */
+    max-width: 650px;                              /* Maximum width for larger screens */
+    max-height: 50vh;                              /* Use viewport height for better scaling */
+    overflow-y: auto;                              /* Enable vertical scrolling */
+    display: flex;                                 /* Use flexbox for layout */
+    flex-direction: column;                        /* Stack items vertically */
+    justify-content: center;                       /* Center items vertically */
+    align-items: center;                           /* Center the items horizontally */
+}
+
+/* Blur effect for the background */
+.blur-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;                           /* Inherit the background for the blur effect */
+    backdrop-filter: blur(5px);                    /* Apply blur effect */
+    z-index: 999;                                  /* Behind the cookie banner */
+}
+
+/* Header styling */
+.cookie-banner h3 {
+    margin: 5px 0;                                /* Margin for spacing */
+    font-size: 1.6rem;                            /* Slightly smaller font size */
+    color: #333;                                  /* Darker color for better contrast */
+}
+
+/* Paragraph styling */
+.cookie-banner p {
+    margin: 5px 0;                                /* Adjust margin */
+    font-size: 1rem;                              /* More readable font size */
+    color: #555;                                  /* Medium gray for paragraph text */
+}
+
+/* Label styling */
+.cookie-banner label {
+    display: flex;                                /* Use flex for alignment */
+    align-items: center;                          /* Center vertically */
+    justify-content: center;                      /* Center horizontally */
+    font-size: 1rem;                              /* Set a more readable size */
+    margin-bottom: 5px;                           /* Add spacing between labels */
+    width: 100%;                                  /* Ensure labels take full width */
+    text-align: center;                           /* Center label text */
+}
+
+/* Checkbox styling */
+.cookie-banner input[type="checkbox"] {
+    margin-right: 10px;                           /* Space between checkbox and label text */
+    transform: scale(1.2);                        /* Slightly increase checkbox size */
+}
+
+/* Button styling */
+.cookie-banner button {
+    margin: 5px 0;                                /* Space above and below buttons */
+    padding: 10px 15px;                           /* Adjust padding for button */
+    background-color: #5a6fe6;                    /* Background color for buttons */
+    color: white;                                 /* Text color */
+    border: none;                                 /* No border */
+    border-radius: 5px;                           /* Rounded corners */
+    cursor: pointer;                              /* Pointer cursor on hover */
+    font-size: 1rem;                              /* More readable font size */
+    transition: background-color 0.3s;            /* Smooth background color transition */
+}
+
+/* Button hover effect */
+.cookie-banner button:hover {
+    background-color: #4a5bc3;                    /* Darker shade on hover */
+}
+
+/* Responsive styling */
+
+/* For desktop screens (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .cookie-banner {
+        width: 80%;                               /* Standard width for larger screens */
+        max-width: 650px;                         /* Max width to limit the banner size */
+        padding: 10px;                            /* Adequate padding */
+    }
+
+    .cookie-banner h3 {
+        font-size: 1.2rem;                        /* Slightly smaller heading size */
+    }
+
+    .cookie-banner p {
+        font-size: 1rem;                          /* Standard paragraph size */
+    }
+
+    .cookie-banner button {
+        padding: 10px 15px;                       /* Standard button padding */
+        font-size: 1rem;                          /* Standard button font size */
+    }
+
+    .cookie-banner label {
+        font-size: 1rem;                          /* Standard label font size */
+    }
+}
+
+/* For tablet screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .cookie-banner {
+        width: 90%;                               /* Wider for smaller screens */
+        max-width: 600px;                         /* Adjust max width */
+        padding: 10px;                            /* Adjust padding */
+    }
+    
+    .cookie-banner h3 {
+        font-size: 1.4rem;                        /* Adjust heading size */
+    }
+    
+    .cookie-banner p {
+        font-size: 0.9rem;                        /* Adjust paragraph size */
+    }
+    
+    .cookie-banner button {
+        padding: 10px 12px;                       /* Adjust padding for button */
+        font-size: 0.9rem;                        /* Adjust button font size */
+    }
+
+    .cookie-banner label {
+        font-size: 1rem;                          /* Adjust label size */
+    }
+}
+
+/* For mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .cookie-banner {
+        width: 90%;                               /* Increase width for smaller screens */
+        padding: 8px;                             /* Adjust padding */
+    }
+    
+    .cookie-banner h3 {
+        font-size: 1.2rem;                        /* Adjust font size */
+    }
+    
+    .cookie-banner p {
+        font-size: 0.8rem;                        /* Adjust paragraph font size */
+    }
+    
+    .cookie-banner button {
+        padding: 8px 10px;                        /* Adjust button padding */
+        font-size: 0.8rem;                        /* Adjust button font size */
+    }
+
+    .cookie-banner label {
+        font-size: 0.9rem;                        /* Adjust label font size */
+    }
+}
+
+/* For smaller mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .cookie-banner {
+        width: 95%;                               /* Wider for very small screens */
+        padding: 5px;                             /* Reduce padding for smaller devices */
+    }
+    
+    .cookie-banner h3 {
+        font-size: 1rem;                          /* Reduce font size */
+    }
+    
+    .cookie-banner p {
+        font-size: 0.7rem;                        /* Reduce paragraph font size */
+    }
+    
+    .cookie-banner button {
+        padding: 6px 8px;                         /* Reduce padding */
+        font-size: 0.7rem;                        /* Reduce button font size */
+    }
+
+    .cookie-banner label {
+        font-size: 0.8rem;                        /* Adjust label font size */
+    }
+}

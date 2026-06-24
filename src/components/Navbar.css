@@ -1,0 +1,221 @@
+
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif; /* Apply Open Sans globally */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Navbar Styles */
+.navbar-unique { 
+  background: #fff;
+  min-height: 80px; /* Adjusted height */
+  max-height: 92px;
+  padding: 50px 0;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Fixed positioning for always-visible navbar */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure navbar is on top of other elements */
+  transition: backdrop-filter 0.3s ease; /* Smooth transition for blur effect */
+}
+
+.navbar-unique.blurred {
+  filter: blur(4px); /* Adjust blur amount as needed */
+  pointer-events: none; /* Prevent pointer events when blurred */
+}
+
+.navbar-unique:not(.blurred) {
+  pointer-events: auto; /* Ensure pointer events are enabled when not blurred */
+}
+
+
+
+/* Container Styles */
+.navbar-container-unique {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Logo Styles */
+
+/* Menu Icon Styles */
+.menu-icon-unique {
+  display: block; /* Ensure visibility */
+  font-size: 2.3rem; /* Increased font size */
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1001; /* Ensure it's above the menu */
+  background-color: #fff; /* Background color for visibility */
+  border-radius: 8px; /* Rounded corners */
+  padding: 5px; /* Padding for clickable area */
+}
+
+.menu-icon-unique svg {
+  width: 2.3rem; /* Match the font-size for SVG icons */
+  height: 2.3rem; /* Match the font-size for SVG icons */
+}
+
+/* Nav Menu Styles */
+.nav-menu-unique {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0; /* Remove gap to reduce space between items */
+  color: #333;
+}
+
+/* Nav Item Styles */
+.nav-item-unique {
+  height: 100%;
+  margin: 0; /* Remove margin */
+  display: flex; /* Flexbox to center content */
+  align-items: center; /* Center vertically */
+}
+
+/* Nav Link Styles */
+.nav-links-unique {
+  color: #333;
+  text-decoration: none;
+  padding: 0 0.5rem; /* Reduce padding to decrease space */
+  height: 100%;
+  line-height: 80px; /* Center text vertically */
+  font-size: 1rem; /* Adjust font size as needed */
+}
+
+/* Underline effect on hover */
+.nav-links-unique:hover {
+  border-bottom: 2px solid #333; /* Underline on hover */
+}
+
+/* Mobile Menu Styles */
+.nav-menu-unique.mobile {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 80%; /* Adjusted to appear directly below the button */
+  right: 0;
+  background-color: #fff;
+  width: 100%;
+  max-width: 150px; /* Increased width for better spacing */
+  padding: 10px 0; /* Padding around the menu */
+  z-index: 1000; /* Ensure it's on top of other content */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Active mobile menu styles */
+.nav-menu-unique.mobile.active {
+  display: flex; /* Show the menu when active */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for visibility */
+}
+
+/* Mobile Menu Item Styles */
+.nav-menu-unique.mobile .nav-item-unique {
+  margin: 0; /* Remove margin around items */
+  display: flex; /* Flexbox to center content */
+  justify-content: center; /* Center items horizontally */
+}
+
+/* Mobile Menu Link Styles */
+.nav-menu-unique.mobile .nav-links-unique {
+  font-size: 1.5rem; /* Increase font size for better readability */
+  padding: 10px 20px; /* Add padding for better touch targets and spacing */
+  border-bottom: 1px solid #ddd; /* Add a subtle border between items */
+  text-align: center; /* Center text within each link */
+  display: block; /* Ensure each link is displayed as a block */
+}
+
+/* Hover effect for mobile menu links */
+.nav-menu-unique.mobile .nav-links-unique:hover {
+  background-color: #f1f1f1; /* Change background on hover */
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  .nav-menu-unique.mobile {
+    display: none;
+  }
+
+  .nav-menu-unique {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu-icon-unique {
+    display: none; /* Hide on larger screens */
+  }
+
+  /* Increase font size and add spacing for larger screens */
+  .nav-links-unique {
+    font-size: 1.3rem; /* Increase font size for better readability */
+    padding: 0 1rem; /* Add more padding to increase space between items */
+  }
+
+  .nav-item-unique {
+    margin: 0 0.5rem; /* Add margin to create spacing between items */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-logo-unique img {
+    max-width: 200px; /* Adjust the logo size */
+    height: auto;
+  }
+  .nav-menu-unique {
+    display: none; /* Default to hidden */
+  }
+
+  .menu-icon-unique {
+    display: block; /* Ensure visibility on small screens */
+  }
+}
+
+/* Media Queries for larger screens */
+@media screen and (min-width: 768px) {
+  .slideshow-container {
+    min-height: 600px; /* Adjust height for larger screens */
+  }
+  .navbar-logo-unique img {
+    max-width: 250px; /* Adjust the logo size */
+    height: auto;
+  }
+  .slideshow-slogan {
+    font-size: 2.1rem;
+    top: 60%; /* Move the slogan further down on larger screens */
+  }
+
+  .slideshow-btn {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .slideshow-container {
+    min-height: 600px; /* Adjust height for very large screens */
+  }
+
+  .slideshow-slogan {
+    font-size: 3rem; /* Larger font size for very large screens */
+  }
+}

@@ -1,0 +1,190 @@
+/* Kontaktformular.css */
+
+/* Container für das Formular */
+.kontaktformular-container {
+  width: 100%;
+  max-width: 500px; /* Increased width */
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formular-Elemente */
+.kontaktformular-container .form-group {
+  margin-bottom: 15px;
+}
+
+.kontaktformular-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.kontaktformular-container input[type="text"],
+.kontaktformular-container input[type="email"],
+.kontaktformular-container input[type="tel"],
+.kontaktformular-container textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.kontaktformular-container input[type="text"]:focus,
+.kontaktformular-container input[type="email"]:focus,
+.kontaktformular-container input[type="tel"]:focus,
+.kontaktformular-container textarea:focus {
+  border-color: #66afe9;
+  outline: none;
+}
+
+.kontaktformular-container textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.kontaktformular-container button {
+  width: 50%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.kontaktformular-container button:hover {
+  background-color: #0056b3;
+}
+
+.kontaktformular-container p {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+/* Small screens mobile devices  */
+@media (max-width: 767px)  {
+  /* Styles for small screens (up to 767px wide)  */
+  .kontaktformular-container {
+    width: 90%; /* Adjust for mobile landscape */
+    padding: 15px;
+  }
+
+ 
+
+  .kontaktformular-container textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+
+  .kontaktformular-container button {
+    width: 50%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+
+  .labelText {
+    font-size: 20px;
+
+  }
+
+  .captcha {
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center the captcha horizontally */
+    
+  }
+}
+
+
+
+
+/* Tablets (768px to 1023px wide) */
+@media (min-width: 768px) and (max-width: 1023px)  {
+  /* Styles for tablets in landscape mode */
+  .kontaktformular-container {
+    width: 85%; /* Adjust width for tablets */
+    padding: 20px;
+  }
+}
+
+/* Small laptops (1024px to 1366px wide) */
+@media (min-width: 1024px) and (max-width: 1366px)  {
+  /* Styles for small laptops in landscape */
+  .kontaktformular-container {
+    width: 75%; /* Adjust width for small laptops */
+    padding: 25px;
+  }
+}
+
+
+
+
+
+/* Desktops and larger laptops (1367px and up) */
+@media (min-width: 1367px) {
+  /* Styles for desktops and large laptops */
+  .kontaktformular-container {
+    width: 60%; /* Wider layout for larger screens */
+    padding: 20px;
+  }
+
+  .kontaktformular-container textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+
+  .kontaktformular-container button {
+    width: 50%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+
+  .labelText {
+    font-size: 20px;
+
+  }
+
+  .captcha {
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center the captcha horizontally */
+    
+  }
+}
+

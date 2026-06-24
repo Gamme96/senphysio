@@ -1,0 +1,215 @@
+/* General reset and box-sizing rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow {
+  width: 100%;
+  margin-top: 92px;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slideshow.blurred {
+  filter: blur(3px);
+}
+
+/* Slideshow setup */
+.slideshow-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slideshow-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.slideshow-slide-active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Dots */
+.slideshow-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slideshow-dot {
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.slideshow-dot:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.slideshow-dot.active {
+  background: #ffffff;
+  transform: scale(1.2);
+}
+
+/* Button styling */
+.slideshow-btn {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 30px;
+  background-color: #656b7e;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.7rem;
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.342);
+}
+
+.slideshow-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Slogan styling */
+.slideshow-slogan {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-family: 'Open Sans', serif;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  font-size: 1.8rem;
+}
+
+/* Smartphones */
+@media screen and (max-width: 767px) {
+  .slideshow-container {
+    height: 60vh;
+    min-height: 500px;
+  }
+
+  .slideshow-slogan {
+    top: 42%;
+    font-size: 1.4rem;
+    padding: 8px 10px;
+  }
+
+  .slideshow-btn {
+    bottom: 75px;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+
+  .slideshow-dots {
+    bottom: 20px;
+    gap: 8px;
+  }
+
+  .slideshow-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .slideshow-container {
+    height: 60vh;
+    min-height: 550px;
+  }
+
+  .slideshow-slogan {
+    top: 38%;
+    font-size: 1.6rem;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .slideshow-container {
+    height: 65vh;
+    min-height: 500px;
+  }
+
+  .slideshow-slogan {
+    top: 40%;
+    font-size: 1.8rem;
+  }
+}
+
+/* Large desktop */
+@media screen and (min-width: 1600px) {
+  .slideshow-container {
+    height: 80vh;
+    min-height: 700px;
+  }
+
+  .slideshow-slogan {
+    top: 40%;
+    font-size: 2.2rem;
+  }
+}
+
+/* Very large desktop */
+@media screen and (min-width: 1920px) {
+  .slideshow-container {
+    min-height: 800px;
+    height: 70vh;
+  }
+
+  .slideshow-slogan {
+        top: 40%;
+
+    font-size: 2.7rem;
+  }
+}

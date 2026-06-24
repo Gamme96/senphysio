@@ -1,0 +1,113 @@
+/* General reset and box-sizing rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Unique Footer container setup */
+.footer-container-unique {
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  padding: 20px;
+  text-align: center;
+  font-family: 'Open Sans', serif;
+}
+
+.footer-top-unique {
+  display: flex;
+  flex-direction: column; /* Stack all elements vertically */
+  align-items: center; /* Center align all content */
+  margin-bottom: 30px; /* Increased space below the top section */
+}
+
+.footer-contact-info-unique,
+.footer-opening-hours-unique,
+.footer-social-unique {
+  margin-bottom: 30px; /* Increased space between sections */
+  color: #fff; /* White text */
+}
+
+.footer-contact-info-unique h4,
+.footer-opening-hours-unique h4,
+.footer-social-unique h4 {
+  font-size: 1.4rem; /* Increased font size for headers */
+  margin-bottom: 10px;
+}
+
+.footer-contact-info-unique p,
+.footer-opening-hours-unique p,
+.footer-social-unique a {
+  font-size: 1.2rem; /* Increased font size for text */
+  line-height: 1.6;
+  color: #ddd; /* Light gray for better readability */
+}
+
+.footer-contact-info-unique p {
+  margin: 5px 0;
+}
+
+.footer-contact-info-unique a {
+  color: #bebcbc;
+}
+
+.footer-opening-hours-unique p {
+  margin: 0;
+  margin-bottom: 10px;
+
+}
+
+.footer-unique.blurred {
+  filter: blur(4px); /* Adjust blur amount as needed */
+  pointer-events: none; /* Prevent pointer events when blurred */
+}
+
+.footer-social-unique a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 3.2rem; /* Increased font size for social media icons */
+}
+
+.footer-social-unique a:hover {
+  color: #aaa; /* Slight color change on hover */
+}
+
+.footer-bottom-unique {
+  border-top: 1px solid #444; /* Divider line at the top */
+  padding-top: 10px;
+  font-size: 1rem; /* Increased font size for the footer bottom text */
+}
+
+.footer-bottom-unique a {
+  color: #ddd; /* Light gray for links */
+  text-decoration: none;
+}
+
+.footer-bottom-unique a:hover {
+  text-decoration: underline;
+}
+
+.footer-links-unique {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.footer-links-unique a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #f1ebeb; /* Change this to your preferred color */
+  font-weight: bold;
+}
+
+.footer-links-unique a:hover {
+  text-decoration: underline;
+}
